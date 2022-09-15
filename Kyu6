@@ -1,0 +1,25 @@
+function whiteBlackAreas(cols, rows) {
+  let colsOdd = 0;
+  let colsEven = 0;
+  let rowsOdd = 0;
+  let rowsEven = 0;
+  for (let i = 0; i < cols.length; i++) {
+    if(i%2 != 0) {
+      colsEven += cols[i];
+    }else {
+      colsOdd += cols[i];
+    }
+  }
+  for (let i = 0; i < rows.length; i++) {
+    if(i%2 != 0) {
+      rowsEven += rows[i];
+    }else {
+      rowsOdd += rows[i];
+    }
+  }
+function getsq(co,ce,ro,re) {
+  return [co*ro+ce*re,co*re+ce*ro]
+}
+
+    return   getsq(colsOdd, colsEven, rowsOdd, rowsEven)
+}
